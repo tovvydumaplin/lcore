@@ -452,11 +452,22 @@ body {
 
   main {
     grid-template-columns: 1fr;
+    display: flex;
   }
   .sidebar__nav {
     display: none;
   }
   .grid.grid__4__cols {
     grid-template-columns: 1fr 1fr;
+  }
+  .second__row {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .recent__employee__card {
+    grid-column: 1;
+  }
+  .chart {
+    grid-column: span 2;
   }
 }
