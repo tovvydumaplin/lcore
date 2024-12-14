@@ -452,7 +452,6 @@ body {
 
   main {
     grid-template-columns: 1fr;
-    display: flex;
   }
   .sidebar__nav {
     display: none;
@@ -469,6 +468,9 @@ body {
   }
   .chart {
     grid-column: span 2;
+  }
+  .container {
+    grid-area: initial;
   }
 }
 /* 616 PX */
@@ -495,5 +497,11 @@ body {
   }
   .announcement__card {
     padding: 3rem 3rem 6rem 3rem;
+  }
+  .logo {
+    width: 100%;
+  }
+  .settings__icons {
+    display: none;
   }
 }
