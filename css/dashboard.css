@@ -471,3 +471,29 @@ body {
     grid-column: span 2;
   }
 }
+/* 616 PX */
+@media (max-width: 38.5em) {
+  .menu {
+    display: block;
+  }
+  .nav__items {
+    display: none;
+  }
+
+  .grid.grid__4__cols {
+    grid-template-columns: 1fr;
+  }
+  .second__row {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .recent__employee__card {
+    grid-column: initial;
+  }
+  .chart {
+    grid-column: initial;
+  }
+  .announcement__card {
+    padding: 3rem 3rem 6rem 3rem;
+  }
+}
