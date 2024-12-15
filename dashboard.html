@@ -43,8 +43,8 @@
     </header>
     <main>
       <nav class="navigation">
-        <ion-icon class="menu" name="menu-outline"></ion-icon>
-        <ul class="nav__items flex flex__align__center">
+        <ion-icon id="menuButton" class="menu" name="menu-outline"></ion-icon>
+        <ul id="headerNav" class="nav__items flex flex__align__center">
           <li class="nav__item">Dashboard</li>
           <li class="nav__item">
             Payroll Management <ion-icon name="chevron-down-outline"></ion-icon>
@@ -343,8 +343,22 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor i
     <footer class="footer">
       <p class="copyright">&copy;LCore 2024. All Rights Reserved.</p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
+        generateChart();
+        $("#menuButton").on("click", function () {
+          showSideBar();
+        });
+      });
+
+      function showSideBar() {
+        let menuButton = $("#menuButton");
+        let headerNav = $("#headerNav");
+
+        headerNav.toggle("open");
+      }
+      function generateChart() {
         var series = {
           monthDataSeries1: {
             prices: [8107.85, 8128.0, 8122.9, 8165.5, 8340.7, 8423.7],
@@ -401,7 +415,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor i
 
         var chart = new ApexCharts(document.querySelector("#chart"), options);
         chart.render();
-      });
+      }
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
