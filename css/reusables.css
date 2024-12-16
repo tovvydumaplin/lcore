@@ -11,6 +11,7 @@
   --light-gray-color: #d3d3d3;
   --line-color: #cfcfcf;
   --bg-color: #fbfbfd;
+  --gray-text-color: #5a5a5a;
   /* Spacing */
   --gap-xsmall: 1rem;
   --gap-small: 2rem;
@@ -120,9 +121,18 @@ body {
 .display__none {
   display: none;
 }
-
+/* Spacing */
 /* ----- Margin ----- */
 
 .margin__bottom__3 {
   margin-bottom: 3rem;
+}
+
+/* ----- Gap ----- */
+.gap__1 {
+  gap: 1rem;
+}
+/* Hide */
+.hidden {
+  display: none;
 }

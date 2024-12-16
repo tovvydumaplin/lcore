@@ -26,6 +26,49 @@
                 class="header__icon icon__notification"
                 name="notifications-outline"
               ></ion-icon>
+              <div class="notification__container">
+                <div class="notification__heading">
+                  <p class="subheading">Notifications</p>
+                  <span class="notif__text__description"
+                    >You have 5 unread messages</span
+                  >
+                </div>
+                <div class="pending__box">
+                  <!-- 1 -->
+                  <div class="pending__notif">
+                    <div class="green__circle"></div>
+                    <div class="notif__title">
+                      <p class="notif__heading">You have a pending approval.</p>
+                      <span class="text__description">1 hour ago</span>
+                    </div>
+                  </div>
+                  <!-- 2 -->
+                  <div class="pending__notif">
+                    <div class="green__circle"></div>
+                    <div class="notif__title">
+                      <p class="notif__heading">You have a pending approval.</p>
+                      <span class="text__description">1 hour ago</span>
+                    </div>
+                  </div>
+                  <!-- 3 -->
+                  <div class="pending__notif">
+                    <div class="green__circle"></div>
+                    <div class="notif__title">
+                      <p class="notif__heading">You have a pending approval.</p>
+                      <span class="text__description">1 hour ago</span>
+                    </div>
+                  </div>
+                  <!-- 4 -->
+                  <div class="pending__notif">
+                    <div class="green__circle"></div>
+                    <div class="notif__title">
+                      <p class="notif__heading">You have a pending approval.</p>
+                      <span class="text__description">1 hour ago</span>
+                    </div>
+                  </div>
+                  <button class="btn__read">Mark all as read</button>
+                </div>
+              </div>
               <p class="notification__count">34</p>
             </div>
             <ion-icon class="header__icon" name="settings-outline"></ion-icon>
@@ -36,7 +79,36 @@
               alt="Image of the user"
               class="user__image"
             />
-            <p id="userName" class="user__name">Jane Doe</p>
+            <p id="userName" class="user__name name__screen__lg">Jane Doe</p>
+            <div class="account__dropdown">
+              <p
+                class="user__name name__screen__sm flex flex__align__center gap__1"
+              >
+                <ion-icon name="person-outline"></ion-icon>Jane Doe
+              </p>
+              <p
+                class="user__name name__screen__sm flex flex__align__center gap__1"
+              >
+                <ion-icon
+                  class="sidebar__icon"
+                  name="settings-outline"
+                ></ion-icon
+                >Account Settings
+              </p>
+              <p
+                class="user__name name__screen__sm flex flex__align__center gap__1"
+              >
+                <ion-icon
+                  class="sidebar__icon"
+                  name="settings-outline"
+                ></ion-icon
+                >Page Settings
+              </p>
+              <hr />
+              <a href="#" class="link__account flex flex__align__center gap__1"
+                ><ion-icon name="log-out-outline"></ion-icon>Logout</a
+              >
+            </div>
           </div>
         </div>
       </div>
@@ -347,16 +419,44 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor i
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         generateChart();
-        $("#menuButton").on("click", function () {
+        $("#menuButton").on("click", function (e) {
+          e.stopPropagation();
           showSideBar();
+        });
+
+        $(".user__images").on("click", function (e) {
+          e.stopPropagation();
+          showAccountMenu();
+        });
+
+        $(".notif__box").on("click", function (e) {
+          e.stopPropagation(); // Prevent triggering the document click listener
+          showNotification();
+        });
+        $(document).on("click", function () {
+          hideAllMenus();
         });
       });
 
+      function showNotification() {
+        let notifContainer = $(".notification__container");
+        notifContainer.toggleClass("show");
+      }
+
+      function showAccountMenu() {
+        let accountDropdown = $(".account__dropdown");
+        accountDropdown.toggleClass("show");
+      }
       function showSideBar() {
         let menuButton = $("#menuButton");
         let headerNav = $("#headerNav");
 
         headerNav.toggle("open");
+      }
+      function hideAllMenus() {
+        $(".notification__container").removeClass("show");
+        $(".account__dropdown").removeClass("show");
+        $("#headerNav").removeClass("open");
       }
       function generateChart() {
         var series = {
