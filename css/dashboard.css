@@ -119,7 +119,6 @@ body {
   border-bottom-right-radius: 1rem;
   min-width: fit-content;
   white-space: nowrap;
-  background-color: #f1f1f1;
 }
 .dropdown__item {
   padding: 1rem;
@@ -442,6 +441,9 @@ body {
   .grid.grid__4__cols {
     grid-template-columns: 1fr 1fr;
   }
+  .dropdown {
+    background-color: #f1f1f1;
+  }
 }
 /* 940 PX */
 @media (max-width: 58.75em) {
@@ -505,5 +507,16 @@ body {
   }
   .settings__icons {
     display: none;
+  }
+  .settings__icons,
+  .user__images {
+    gap: 1rem;
+  }
+  .user__image {
+    width: 4rem;
+    height: 4rem;
+  }
+  .logo {
+    height: 4rem;
   }
 }
