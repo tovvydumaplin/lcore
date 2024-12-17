@@ -257,6 +257,8 @@ hr {
   border-bottom-right-radius: 1rem;
   min-width: fit-content;
   white-space: nowrap;
+  z-index: 1;
+  visibility: hidden;
 }
 .dropdown__item {
   padding: 1rem;
@@ -272,8 +274,9 @@ hr {
 .nav__item:hover .dropdown {
   display: block;
   opacity: 1;
-  z-index: 1;
+
   top: 100%;
+  visibility: visible;
 }
 
 /* Side bar */
@@ -616,6 +619,7 @@ hr {
     grid-area: initial;
   }
 }
+
 /* 616 PX */
 @media (max-width: 38.5em) {
   .notification__count {
@@ -671,5 +675,17 @@ hr {
   }
   .logo {
     height: 4rem;
+  }
+}
+/* 488 px */
+@media (max-width: 30.5em) {
+  .notification__container {
+    right: 10rem;
+  }
+}
+/* 430 px */
+@media (max-width: 26.875em) {
+  .notification__container {
+    right: 3rem;
   }
 }
