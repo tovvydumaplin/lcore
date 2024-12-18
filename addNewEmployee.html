@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reusables.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/newEmployee.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css"
+    />
+
+    <title>LCore Lending Investors Inc.</title>
+  </head>
+  <body>
+    <header class="header pos__rel">
+      <div class="header__box flex flex__align__center">
+        <div class="logo__box">
+          <img class="logo" src="/assets/logo.png" />
+        </div>
+        <div class="cta__box flex flex__align__center">
+          <div class="settings__icons flex flex__align__center">
+            <div class="notif__box">
+              <ion-icon
+                class="header__icon icon__notification"
+                name="notifications-outline"
+              ></ion-icon>
+              <div class="notification__container">
+                <div class="notification__heading">
+                  <p class="subheading">Notifications</p>
+                  <span class="notif__text__description"
+                    >You have 5 unread messages</span
+                  >
+                </div>
+                <div class="pending__box">
+                  <!-- 1 -->
+                  <div class="pending__notif">
+                    <div class="green__circle"></div>
+                    <div class="notif__title">
+                      <p class="notif__heading">You have a pending approval.</p>
+                      <span class="text__description">1 hour ago</span>
+                    </div>
+                  </div>
+                  <!-- 2 -->
+                  <div class="pending__notif">
+                    <div class="green__circle"></div>
+                    <div class="notif__title">
+                      <p class="notif__heading">You have a pending approval.</p>
+                      <span class="text__description">1 hour ago</span>
+                    </div>
+                  </div>
+                  <!-- 3 -->
+                  <div class="pending__notif">
+                    <div class="green__circle"></div>
+                    <div class="notif__title">
+                      <p class="notif__heading">You have a pending approval.</p>
+                      <span class="text__description">1 hour ago</span>
+                    </div>
+                  </div>
+                  <!-- 4 -->
+                  <div class="pending__notif">
+                    <div class="green__circle"></div>
+                    <div class="notif__title">
+                      <p class="notif__heading">You have a pending approval.</p>
+                      <span class="text__description">1 hour ago</span>
+                    </div>
+                  </div>
+                  <!-- 5 -->
+                  <div class="pending__notif">
+                    <div class="green__circle"></div>
+                    <div class="notif__title">
+                      <p class="notif__heading">You have a pending approval.</p>
+                      <span class="text__description">1 hour ago</span>
+                    </div>
+                  </div>
+                  <!-- 6 -->
+                  <div class="pending__notif">
+                    <div class="green__circle"></div>
+                    <div class="notif__title">
+                      <p class="notif__heading">You have a pending approval.</p>
+                      <span class="text__description">1 hour ago</span>
+                    </div>
+                  </div>
+                  <!-- 7 -->
+                  <div class="pending__notif">
+                    <div class="green__circle"></div>
+                    <div class="notif__title">
+                      <p class="notif__heading">You have a pending approval.</p>
+                      <span class="text__description">1 hour ago</span>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn__read">Mark all as read</button>
+              </div>
+              <p class="notification__count">34</p>
+            </div>
+            <ion-icon class="header__icon" name="settings-outline"></ion-icon>
+          </div>
+          <div class="user__images flex flex__align__center">
+            <img
+              src="assets/user.png"
+              alt="Image of the user"
+              class="user__image"
+            />
+            <p id="userName" class="user__name name__screen__lg">Jane Doe</p>
+            <div class="account__dropdown">
+              <p
+                class="user__name name__screen__sm flex flex__align__center gap__1"
+              >
+                <ion-icon name="person-outline"></ion-icon>Jane Doe
+              </p>
+              <p
+                class="user__name name__screen__sm flex flex__align__center gap__1"
+              >
+                <ion-icon
+                  class="sidebar__icon"
+                  name="settings-outline"
+                ></ion-icon
+                >Account Settings
+              </p>
+              <p
+                class="user__name name__screen__sm flex flex__align__center gap__1"
+              >
+                <ion-icon
+                  class="sidebar__icon"
+                  name="settings-outline"
+                ></ion-icon
+                >Page Settings
+              </p>
+              <hr />
+              <a href="#" class="link__account flex flex__align__center gap__1"
+                ><ion-icon name="log-out-outline"></ion-icon>Logout</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <nav class="navigation">
+        <ion-icon id="menuButton" class="menu" name="menu-outline"></ion-icon>
+        <ul id="headerNav" class="nav__items flex flex__align__center">
+          <li class="nav__item">Dashboard</li>
+          <li class="nav__item">
+            Payroll Management <ion-icon name="chevron-down-outline"></ion-icon>
+            <ul class="dropdown">
+              <li class="dropdown__item">Salary</li>
+              <li class="dropdown__item">Salary</li>
+              <li class="dropdown__item">Salary</li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            Loans & Deduction <ion-icon name="chevron-down-outline"></ion-icon>
+            <ul class="dropdown">
+              <li class="dropdown__item">Salary</li>
+              <li class="dropdown__item">Salary</li>
+              <li class="dropdown__item">Salary</li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            Attendance <ion-icon name="chevron-down-outline"></ion-icon>
+            <ul class="dropdown">
+              <li class="dropdown__item">Salary</li>
+              <li class="dropdown__item">Salary</li>
+              <li class="dropdown__item">Salary</li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            Employee Management
+            <ion-icon name="chevron-down-outline"></ion-icon>
+            <ul class="dropdown">
+              <li class="dropdown__item">Salary</li>
+              <li class="dropdown__item">Salary</li>
+              <li class="dropdown__item">Salary</li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            Monitoring <ion-icon name="chevron-down-outline"></ion-icon>
+            <ul class="dropdown">
+              <li class="dropdown__item">Salary</li>
+              <li class="dropdown__item">Salary</li>
+              <li class="dropdown__item">Salary</li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            Reports <ion-icon name="chevron-down-outline"></ion-icon>
+            <ul class="dropdown">
+              <li class="dropdown__item">Salary</li>
+              <li class="dropdown__item">Salary</li>
+              <li class="dropdown__item">Salary</li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            Employee Movements <ion-icon name="chevron-down-outline"></ion-icon>
+            <ul class="dropdown">
+              <li class="dropdown__item">Salary</li>
+              <li class="dropdown__item">Salary</li>
+              <li class="dropdown__item">Salary</li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <aside class="sidebar__nav">
+        <p class="side_heading">Quick Links</p>
+        <ul class="sidebar__items">
+          <li>
+            <a href="#" class="nav__links"
+              ><ion-icon
+                class="sidebar__icon"
+                name="cloud-upload-outline"
+              ></ion-icon
+              >Upload Files</a
+            >
+          </li>
+          <li>
+            <a href="#" class="nav__links"
+              ><ion-icon
+                class="sidebar__icon"
+                name="file-tray-full-outline"
+              ></ion-icon
+              >All Memos</a
+            >
+          </li>
+          <li>
+            <a href="#" class="nav__links"
+              ><ion-icon
+                class="sidebar__icon"
+                name="person-add-outline"
+              ></ion-icon
+              >New Employee</a
+            >
+          </li>
+          <li>
+            <a href="#" class="nav__links"
+              ><ion-icon class="sidebar__icon" name="people-outline"></ion-icon
+              >All Employees</a
+            >
+          </li>
+        </ul>
+        <p class="side_heading">Settings</p>
+        <ul class="sidebar__items">
+          <li>
+            <a href="#" class="nav__links"
+              ><ion-icon
+                class="sidebar__icon"
+                name="settings-outline"
+              ></ion-icon
+              >Upload Files</a
+            >
+          </li>
+          <li>
+            <a href="#" class="nav__links"
+              ><ion-icon
+                class="sidebar__icon"
+                name="settings-outline"
+              ></ion-icon
+              >All Memos</a
+            >
+          </li>
+        </ul>
+      </aside>
+      <div class="container">
+        <div class="heading__box flex flex__align__center">
+          <h1 class="heading__primary">Add New Employee</h1>
+          <div class="breadcrumbs">
+            <p class="pages">Pages / <span>New Employee</span></p>
+          </div>
+        </div>
+        <div class="employee__card">
+          <form class="form__container">
+            <div class="first__row grid">
+              <div class="profile__picture">
+                <p class="profile__heading">Profile Picture</p>
+                <img class="profile__image" src="assets/person__profile.png" />
+                <p class="text__description bg__color__td">
+                  <span class="note">Note:</span> Only .png, .jpg and .jpeg
+                  image files are accepted
+                </p>
+              </div>
+              <div class="general__information">
+                <div class="info__heading__box">
+                  <p class="profile__heading">General Information</p>
+                  <button class="btn__primary">Edit Profile</button>
+                </div>
+                <div class="input__boxes">
+                  <!-- 1 -->
+                  <div class="input__row grid__4cols__modified">
+                    <div class="input__box">
+                      <input
+                        class="information__input"
+                        placeholder="Enter fullname"
+                      />
+                      <span class="input__title">Lastname</span>
+                    </div>
+                    <div class="input__box">
+                      <input
+                        class="information__input"
+                        placeholder="Enter firstname"
+                      />
+                      <span class="input__title">Firstname</span>
+                    </div>
+                    <div class="input__box">
+                      <input
+                        class="information__input"
+                        placeholder="Enter middle name"
+                      />
+                      <span class="input__title">Middle Name</span>
+                    </div>
+                    <div class="input__box">
+                      <input
+                        class="information__input"
+                        placeholder="Enter suffix"
+                      />
+                      <span class="input__title">Suffix</span>
+                    </div>
+                  </div>
+                  <!-- 2 -->
+                  <div class="input__row grid__6cols__modified">
+                    <div class="input__box">
+                      <input
+                        class="information__input"
+                        placeholder="Enter gender"
+                      />
+                      <span class="input__title">Gender</span>
+                    </div>
+                    <div class="input__box">
+                      <input
+                        class="information__input"
+                        placeholder="Enter civil status"
+                      />
+                      <span class="input__title">Civil Status</span>
+                    </div>
+                    <div class="input__box">
+                      <input
+                        class="information__input"
+                        placeholder="Enter date of birth"
+                      />
+                      <span class="input__title">Date of Birth</span>
+                    </div>
+                    <div class="input__box">
+                      <input
+                        class="information__input"
+                        placeholder="Enter age"
+                      />
+                      <span class="input__title">Age</span>
+                    </div>
+                    <div class="input__box">
+                      <input
+                        class="information__input"
+                        placeholder="Enter religion"
+                      />
+                      <span class="input__title">Religion</span>
+                    </div>
+                    <div class="input__box">
+                      <input
+                        class="information__input"
+                        placeholder="Enter contact no."
+                      />
+                      <span class="input__title">Contact Number</span>
+                    </div>
+                  </div>
+                  <!-- 3 -->
+                  <div class="input__row grid__3cols__modified">
+                    <div class="input__box">
+                      <input
+                        class="information__input"
+                        placeholder="Enter email address"
+                      />
+                      <span class="input__title">Email Address</span>
+                    </div>
+                    <div class="input__box">
+                      <input
+                        class="information__input"
+                        placeholder="Enter address"
+                      />
+                      <span class="input__title">Permanent Address</span>
+                    </div>
+                    <div class="input__box">
+                      <input
+                        class="information__input"
+                        placeholder="Enter educational attainment"
+                      />
+                      <span class="input__title">Educational Attainment</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="second__row">
+              <p class="profile__heading work__information">Work Information</p>
+              <div class="input__boxes">
+                <!-- 1 -->
+                <div class="input__row grid__5cols__modified">
+                  <div class="input__box">
+                    <input
+                      class="information__input"
+                      placeholder="Enter date"
+                    />
+                    <span class="input__title">Date Hired</span>
+                  </div>
+                  <div class="input__box">
+                    <input
+                      class="information__input"
+                      placeholder="Enter designation"
+                    />
+                    <span class="input__title">Designation</span>
+                  </div>
+                  <div class="input__box">
+                    <input
+                      class="information__input"
+                      placeholder="Enter contact no."
+                    />
+                    <span class="input__title">Company Contact Number</span>
+                  </div>
+                  <div class="input__box">
+                    <input
+                      class="information__input"
+                      placeholder="Enter office"
+                    />
+                    <span class="input__title">Office</span>
+                  </div>
+                  <div class="input__box">
+                    <input
+                      class="information__input"
+                      placeholder="Enter department or branch"
+                    />
+                    <span class="input__title">Department or Branch</span>
+                  </div>
+                </div>
+                <!-- 2 -->
+                <div class="input__row grid__4cols__modified">
+                  <div class="input__box">
+                    <input
+                      class="information__input"
+                      placeholder="Enter job level"
+                    />
+                    <span class="input__title">Job Level</span>
+                  </div>
+                  <div class="input__box">
+                    <input
+                      class="information__input"
+                      placeholder="Enter employment status"
+                    />
+                    <span class="input__title">Employment Status</span>
+                  </div>
+                  <div class="input__box">
+                    <input
+                      class="information__input"
+                      placeholder="Enter date"
+                    />
+                    <span class="input__title">Regularization Date</span>
+                  </div>
+                  <div class="input__box">
+                    <input
+                      class="information__input"
+                      placeholder="Enter bank account no."
+                    />
+                    <span class="input__title">Bank Account Number</span>
+                  </div>
+                </div>
+                <!-- 3 -->
+                <p class="profile__heading government__details">
+                  Government Records
+                </p>
+                <div class="input__row grid__4cols__modified">
+                  <div class="input__box">
+                    <input
+                      class="information__input"
+                      placeholder="Enter SSS number"
+                    />
+                    <span class="input__title">SSS Number</span>
+                  </div>
+                  <div class="input__box">
+                    <input
+                      class="information__input"
+                      placeholder="Enter philhealth no."
+                    />
+                    <span class="input__title">Philhealth Number</span>
+                  </div>
+                  <div class="input__box">
+                    <input
+                      class="information__input"
+                      placeholder="Enter pag-ibig no."
+                    />
+                    <span class="input__title">Pag-IBIG Number</span>
+                  </div>
+                  <div class="input__box">
+                    <input class="information__input" placeholder="Enter TIN" />
+                    <span class="input__title">Tax Identification Number</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="btn__primary" type="submit">Save employee</button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <p class="copyright">&copy;LCore 2024. All Rights Reserved.</p>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        $("#dataTable").DataTable();
+
+        $("#menuButton").on("click", function (e) {
+          e.stopPropagation();
+          showSideBar();
+        });
+
+        $(".user__images").on("click", function (e) {
+          e.stopPropagation();
+          showAccountMenu();
+        });
+
+        $(".notif__box").on("click", function (e) {
+          e.stopPropagation(); // Prevent triggering the document click listener
+          showNotification();
+        });
+        $(document).on("click", function () {
+          hideAllMenus();
+        });
+      });
+
+      function showNotification() {
+        let notifContainer = $(".notification__container");
+        notifContainer.toggleClass("show");
+      }
+
+      function showAccountMenu() {
+        let accountDropdown = $(".account__dropdown");
+        accountDropdown.toggleClass("show");
+      }
+      function showSideBar() {
+        let menuButton = $("#menuButton");
+        let headerNav = $("#headerNav");
+
+        headerNav.toggle("open");
+      }
+      function hideAllMenus() {
+        $(".notification__container").removeClass("show");
+        $(".account__dropdown").removeClass("show");
+        $("#headerNav").removeClass("open");
+      }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

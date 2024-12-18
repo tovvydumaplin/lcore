@@ -1,0 +1,106 @@
+.container {
+}
+
+.first__row {
+  grid-template-columns: 0.3fr 1.7fr;
+  padding-bottom: 2rem;
+
+  border-bottom: 1px solid var(--line-color);
+}
+.note {
+  font-weight: 600;
+}
+.bg__color__td {
+  background-color: var(--green-color-2);
+}
+.form__container {
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white-color);
+  border-radius: 1rem;
+  box-shadow: 0px 4px 9px 0px rgba(95, 95, 95, 0.1);
+}
+.profile__image {
+  background-color: #f1f1f1;
+  border-radius: 1rem;
+}
+.text__description.bg__color__td {
+  font-size: 1.2rem;
+  line-height: 1.2;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.profile__picture {
+  justify-items: center;
+  padding-right: 2rem;
+  border-right: 1px solid var(--line-color);
+}
+
+.profile__heading {
+  font-weight: 600;
+  color: var(--black-color);
+  margin-bottom: 4rem;
+  font-size: 1.6rem;
+  justify-self: start;
+}
+.profile__image {
+  margin-bottom: 3rem;
+}
+.info__heading__box {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+.input__box {
+  position: relative;
+}
+.information__input {
+  padding: 3.5rem 2rem 1.5rem 2rem;
+  border-radius: 1rem;
+  border: 1px solid var(--line-color);
+  width: 100%;
+}
+.input__row {
+  display: flex;
+}
+.input__title {
+  position: absolute;
+  font-size: 1.2rem;
+  left: 2rem;
+  top: 1.5rem;
+}
+.grid__4cols__modified {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.grid__5cols__modified {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.grid__6cols__modified {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 0.5fr 1fr 1.5fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.grid__3cols__modified {
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr 1fr;
+  gap: 2rem;
+}
+.general__information {
+  padding: 0 0 0 2rem;
+}
+.work__information {
+  padding-top: 4rem;
+  margin-bottom: 2rem;
+}
+.government__details {
+  padding: 0;
+  margin-bottom: 2rem;
+}
