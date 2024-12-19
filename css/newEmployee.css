@@ -150,8 +150,3 @@
   bottom: 2rem;
   right: -2rem;
 }
-.user__image {
-  width: 6rem;
-  border-radius: 50%;
-  background-color: var(--light-gray-color);
-}

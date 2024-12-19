@@ -80,6 +80,12 @@ body {
 .user__images {
   cursor: pointer;
 }
+.user__image {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: var(--light-gray-color);
+}
 .settings__icons,
 .user__images {
   gap: 2rem;
