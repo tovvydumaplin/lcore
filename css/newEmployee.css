@@ -24,6 +24,8 @@
 .profile__image {
   background-color: #f1f1f1;
   border-radius: 1rem;
+  width: 15rem;
+  height: 15rem;
 }
 .text__description.bg__color__td {
   font-size: 1.2rem;
@@ -97,10 +99,59 @@
   padding: 0 0 0 2rem;
 }
 .work__information {
-  padding-top: 4rem;
+  padding-top: 2rem;
   margin-bottom: 2rem;
 }
 .government__details {
   padding: 0;
   margin-bottom: 2rem;
+}
+.btn__box {
+  text-align: right;
+}
+
+.btn__primary {
+  display: flex;
+  align-items: center;
+  border: none;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  gap: 1rem;
+  background-color: var(--green-color-2);
+  font-family: "poppins", sans-serif;
+  font-weight: 500;
+  color: var(--black-color);
+  cursor: pointer;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+.icon__add,
+.icon__edit,
+.icon__change__image,
+.icon__delete__image {
+  width: 2rem;
+  height: 2rem;
+}
+.icon__change__image,
+.icon__delete__image {
+  position: absolute;
+  padding: 1rem;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+}
+.icon__change__image {
+  background-color: var(--green-color);
+  top: -1rem;
+  right: -2rem;
+}
+.icon__delete__image {
+  background-color: var(--red-color);
+  bottom: 2rem;
+  right: -2rem;
+}
+.user__image {
+  width: 6rem;
+  border-radius: 50%;
+  background-color: var(--light-gray-color);
 }

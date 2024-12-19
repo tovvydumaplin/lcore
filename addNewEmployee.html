@@ -106,7 +106,7 @@
           </div>
           <div class="user__images flex flex__align__center">
             <img
-              src="assets/user.png"
+              src="assets/person__profile.png"
               alt="Image of the user"
               class="user__image"
             />
@@ -279,7 +279,30 @@
             <div class="first__row grid">
               <div class="profile__picture">
                 <p class="profile__heading">Profile Picture</p>
-                <img class="profile__image" src="assets/person__profile.png" />
+                <div class="picture__box pos__rel">
+                  <img
+                    class="profile__image"
+                    src="assets/default_image.png"
+                    id="profileImage"
+                  />
+                  <ion-icon
+                    class="icon__change__image"
+                    name="image-outline"
+                    id="uploadButton"
+                  ></ion-icon>
+                  <ion-icon
+                    class="icon__delete__image"
+                    name="trash-outline"
+                    id="cancelButton"
+                  ></ion-icon>
+                  <!-- Hidden File Input -->
+                  <input
+                    type="file"
+                    id="fileInput"
+                    accept="image/*"
+                    style="display: none"
+                  />
+                </div>
                 <p class="text__description bg__color__td">
                   <span class="note">Note:</span> Only .png, .jpg and .jpeg
                   image files are accepted
@@ -288,7 +311,13 @@
               <div class="general__information">
                 <div class="info__heading__box">
                   <p class="profile__heading">General Information</p>
-                  <button class="btn__primary">Edit Profile</button>
+                  <button class="btn__primary">
+                    <ion-icon
+                      name="create-outline"
+                      class="icon__edit"
+                    ></ion-icon
+                    >Edit Profile
+                  </button>
                 </div>
                 <div class="input__boxes">
                   <!-- 1 -->
@@ -499,7 +528,12 @@
                 </div>
               </div>
             </div>
-            <button class="btn__primary" type="submit">Save employee</button>
+            <div class="btn__box">
+              <button class="btn__primary" type="submit">
+                <ion-icon class="icon__add" name="add-outline"></ion-icon> Save
+                Changes
+              </button>
+            </div>
           </form>
         </div>
       </div>
@@ -509,8 +543,40 @@
     </footer>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        $("#dataTable").DataTable();
+        // Uploading picture Starts here ~
+        // Trigger file input click when the image icon is clicked
+        $("#uploadButton").on("click", function () {
+          $("#fileInput").click();
+        });
 
+        // Image selection
+        $("#fileInput").on("change", function () {
+          const file = this.files[0];
+
+          if (file) {
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+              $("#profileImage").attr("src", e.target.result);
+            };
+
+            reader.readAsDataURL(file);
+          } else {
+            alert("No file selected!");
+          }
+        });
+        // Clear image source when trash button is clicked
+        $("#cancelButton").on("click", function () {
+          $("#profileImage").attr("src", "assets/default_image.png");
+          $("#fileInput").val("");
+        });
+        // Uploading picture ends here ~
+
+        // Data Tables script
+        $("#dataTable").DataTable();
+        // Data tables ends here ~
+
+        // Event Listeners
         $("#menuButton").on("click", function (e) {
           e.stopPropagation();
           showSideBar();
