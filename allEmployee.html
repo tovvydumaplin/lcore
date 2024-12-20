@@ -277,151 +277,647 @@
           </div>
         </div>
         <div class="cards card__datatable pos__rel">
-          <a href="#" class="link pos__abs export__btn"
-            ><ion-icon class="icon" name="download-outline"></ion-icon>Export</a
-          >
-          <table id="dataTable" class="display">
-            <thead>
-              <tr>
-                <th>Employee ID</th>
-                <th>Name</th>
-                <th>Email Address</th>
-                <th>Permanent Address</th>
-                <th>Birthday</th>
-                <th>Age</th>
-                <th>Gender</th>
-                <th>Status</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>L-9999-01</td>
-                <td>Tovvy Dumaplin</td>
-                <td>Email Address</td>
-                <td>
-                  B5 L26 Crismor Ave. Elvinda Village, City of San Pedro, Laguna
-                </td>
-                <td>01/02/1997</td>
-                <td>27</td>
-                <td>Male</td>
-                <td>Regular</td>
-                <td>---</td>
-              </tr>
-              <tr>
-                <td>L-1001-01</td>
-                <td>John Smith</td>
-                <td>john.smith@example.com</td>
-                <td>123 Main St, City of San Pedro, Laguna</td>
-                <td>05/12/1990</td>
-                <td>33</td>
-                <td>Male</td>
-                <td>Probationary</td>
-                <td>---</td>
-              </tr>
-              <tr>
-                <td>L-2002-01</td>
-                <td>Jane Doe</td>
-                <td>jane.doe@example.com</td>
-                <td>456 Elm St, City of San Pedro, Laguna</td>
-                <td>03/22/1995</td>
-                <td>29</td>
-                <td>Female</td>
-                <td>Probationary</td>
-                <td>---</td>
-              </tr>
-              <tr>
-                <td>L-3003-01</td>
-                <td>Michael Brown</td>
-                <td>michael.brown@example.com</td>
-                <td>789 Pine St, City of Biñan, Laguna</td>
-                <td>11/10/1988</td>
-                <td>36</td>
-                <td>Male</td>
-                <td>Probationary</td>
-                <td>---</td>
-              </tr>
-              <tr>
-                <td>L-4004-01</td>
-                <td>Emily Davis</td>
-                <td>emily.davis@example.com</td>
-                <td>101 Maple Ave, City of San Pedro, Laguna</td>
-                <td>07/05/1992</td>
-                <td>32</td>
-                <td>Female</td>
-                <td>Termindated</td>
-                <td>---</td>
-              </tr>
-              <tr>
-                <td>L-5005-01</td>
-                <td>Chris Johnson</td>
-                <td>chris.johnson@example.com</td>
-                <td>202 Oak Rd, City of San Pedro, Laguna</td>
-                <td>01/17/1985</td>
-                <td>39</td>
-                <td>Male</td>
-                <td>Regular</td>
-                <td>---</td>
-              </tr>
-              <tr>
-                <td>L-6006-01</td>
-                <td>Sarah Wilson</td>
-                <td>sarah.wilson@example.com</td>
-                <td>303 Cedar Blvd, City of San Pedro, Laguna</td>
-                <td>09/09/1993</td>
-                <td>31</td>
-                <td>Female</td>
-                <td>Regular</td>
-                <td>---</td>
-              </tr>
-              <tr>
-                <td>L-7007-01</td>
-                <td>Robert Garcia</td>
-                <td>robert.garcia@example.com</td>
-                <td>404 Birch Ct, City of San Pedro, Laguna</td>
-                <td>02/28/1980</td>
-                <td>44</td>
-                <td>Male</td>
-                <td>Regular</td>
-                <td>---</td>
-              </tr>
-              <tr>
-                <td>L-8008-01</td>
-                <td>Linda Martinez</td>
-                <td>linda.martinez@example.com</td>
-                <td>505 Aspen Ln, City of Biñan, Laguna</td>
-                <td>06/15/1994</td>
-                <td>30</td>
-                <td>Female</td>
-                <td>Regular</td>
-                <td>---</td>
-              </tr>
-              <tr>
-                <td>L-9009-01</td>
-                <td>Daniel Anderson</td>
-                <td>daniel.anderson@example.com</td>
-                <td>606 Spruce St, City of San Pedro, Laguna</td>
-                <td>08/19/1989</td>
-                <td>35</td>
-                <td>Male</td>
-                <td>Regular</td>
-                <td>---</td>
-              </tr>
-              <tr>
-                <td>L-1010-01</td>
-                <td>Jessica Lopez</td>
-                <td>jessica.lopez@example.com</td>
-                <td>707 Willow Ave, City of San Pedro, Laguna</td>
-                <td>12/25/1991</td>
-                <td>33</td>
-                <td>Female</td>
-                <td>Regular</td>
-                <td>---</td>
-              </tr>
-
-              <!-- Add more rows as needed -->
-            </tbody>
-          </table>
+          <div class="button__box pos__abs">
+            <a href="#" class="link add__btn"
+              ><ion-icon class="icon" name="add-outline"></ion-icon>Add
+              Employee</a
+            >
+            <a href="#" class="link export__btn"
+              ><ion-icon class="icon" name="download-outline"></ion-icon
+              >Export</a
+            >
+          </div>
+          <div class="dataWrapper">
+            <table id="dataTable" class="display">
+              <thead>
+                <tr>
+                  <th>Employee ID</th>
+                  <th>Name</th>
+                  <th>Email Address</th>
+                  <th>Permanent Address</th>
+                  <th>Birthday</th>
+                  <th>Age</th>
+                  <th>Gender</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>L-9999-09</td>
+                  <td>John Doe</td>
+                  <td>john.doe@example.com</td>
+                  <td>456 Elm St, Biñan, Laguna</td>
+                  <td>03/15/1990</td>
+                  <td>34</td>
+                  <td>Male</td>
+                  <td>Regular</td>
+                  <td class="pos__rel">
+                    <button class="btn__select">
+                      <ion-icon
+                        name="ellipsis-horizontal-circle-outline"
+                        class="icon__button"
+                      ></ion-icon>
+                    </button>
+                    <div class="dropdown__select">
+                      <a href="#" class="select__item"
+                        ><ion-icon
+                          class="select__icon"
+                          name="create-outline"
+                        ></ion-icon
+                        >Edit</a
+                      >
+                      <a href="#" class="select__item"
+                        ><ion-icon
+                          class="select__icon"
+                          name="folder-open-outline"
+                        ></ion-icon
+                        >View</a
+                      >
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>L-9999-10</td>
+                  <td>Jane Smith</td>
+                  <td>jane.smith@example.com</td>
+                  <td>789 Pine St, San Pedro, Laguna</td>
+                  <td>07/24/1985</td>
+                  <td>39</td>
+                  <td>Female</td>
+                  <td>VIP</td>
+                  <td class="pos__rel">
+                    <button class="btn__select">
+                      <ion-icon
+                        name="ellipsis-horizontal-circle-outline"
+                        class="icon__button"
+                      ></ion-icon>
+                    </button>
+                    <div class="dropdown__select">
+                      <a href="#" class="select__item"
+                        ><ion-icon
+                          class="select__icon"
+                          name="create-outline"
+                        ></ion-icon
+                        >Edit</a
+                      >
+                      <a href="#" class="select__item"
+                        ><ion-icon
+                          class="select__icon"
+                          name="folder-open-outline"
+                        ></ion-icon
+                        >View</a
+                      >
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>L-9999-11</td>
+                  <td>Mark Johnson</td>
+                  <td>mark.johnson@example.com</td>
+                  <td>321 Maple St, Biñan, Laguna</td>
+                  <td>12/05/1992</td>
+                  <td>31</td>
+                  <td>Male</td>
+                  <td>Regular</td>
+                  <td class="pos__rel">
+                    <button class="btn__select">
+                      <ion-icon
+                        name="ellipsis-horizontal-circle-outline"
+                        class="icon__button"
+                      ></ion-icon>
+                    </button>
+                    <div class="dropdown__select">
+                      <a href="#" class="select__item"
+                        ><ion-icon
+                          class="select__icon"
+                          name="create-outline"
+                        ></ion-icon
+                        >Edit</a
+                      >
+                      <a href="#" class="select__item"
+                        ><ion-icon
+                          class="select__icon"
+                          name="folder-open-outline"
+                        ></ion-icon
+                        >View</a
+                      >
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>L-9999-12</td>
+                  <td>Emily Davis</td>
+                  <td>emily.davis@example.com</td>
+                  <td>987 Oak St, San Pedro, Laguna</td>
+                  <td>04/17/1988</td>
+                  <td>36</td>
+                  <td>Female</td>
+                  <td>Regular</td>
+                  <td class="pos__rel">
+                    <button class="btn__select">
+                      <ion-icon
+                        name="ellipsis-horizontal-circle-outline"
+                        class="icon__button"
+                      ></ion-icon>
+                    </button>
+                    <div class="dropdown__select">
+                      <a href="#" class="select__item"
+                        ><ion-icon
+                          class="select__icon"
+                          name="create-outline"
+                        ></ion-icon
+                        >Edit</a
+                      >
+                      <a href="#" class="select__item"
+                        ><ion-icon
+                          class="select__icon"
+                          name="folder-open-outline"
+                        ></ion-icon
+                        >View</a
+                      >
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>L-9999-13</td>
+                  <td>Michael Brown</td>
+                  <td>michael.brown@example.com</td>
+                  <td>654 Cedar St, Biñan, Laguna</td>
+                  <td>09/30/1995</td>
+                  <td>29</td>
+                  <td>Male</td>
+                  <td>VIP</td>
+                  <td class="pos__rel">
+                    <button class="btn__select">
+                      <ion-icon
+                        name="ellipsis-horizontal-circle-outline"
+                        class="icon__button"
+                      ></ion-icon>
+                    </button>
+                    <div class="dropdown__select">
+                      <a href="#" class="select__item"
+                        ><ion-icon
+                          class="select__icon"
+                          name="create-outline"
+                        ></ion-icon
+                        >Edit</a
+                      >
+                      <a href="#" class="select__item"
+                        ><ion-icon
+                          class="select__icon"
+                          name="folder-open-outline"
+                        ></ion-icon
+                        >View</a
+                      >
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>L-9999-14</td>
+                  <td>Alice Wilson</td>
+                  <td>alice.wilson@example.com</td>
+                  <td>432 Birch St, San Pedro, Laguna</td>
+                  <td>11/18/1986</td>
+                  <td>37</td>
+                  <td>Female</td>
+                  <td>Regular</td>
+                  <td class="pos__rel">
+                    <button class="btn__select">
+                      <ion-icon
+                        name="ellipsis-horizontal-circle-outline"
+                        class="icon__button"
+                      ></ion-icon>
+                    </button>
+                    <div class="dropdown__select">
+                      <a href="#" class="select__item"
+                        ><ion-icon
+                          class="select__icon"
+                          name="create-outline"
+                        ></ion-icon
+                        >Edit</a
+                      >
+                      <a href="#" class="select__item"
+                        ><ion-icon
+                          class="select__icon"
+                          name="folder-open-outline"
+                        ></ion-icon
+                        >View</a
+                      >
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>L-9999-15</td>
+                  <td>Robert Taylor</td>
+                  <td>robert.taylor@example.com</td>
+                  <td>765 Cypress St, Biñan, Laguna</td>
+                  <td>06/11/1989</td>
+                  <td>35</td>
+                  <td>Male</td>
+                  <td>Regular</td>
+                  <td class="pos__rel">
+                    <button class="btn__select">
+                      <ion-icon
+                        name="ellipsis-horizontal-circle-outline"
+                        class="icon__button"
+                      ></ion-icon>
+                    </button>
+                    <div class="dropdown__select">
+                      <a href="#" class="select__item"
+                        ><ion-icon
+                          class="select__icon"
+                          name="create-outline"
+                        ></ion-icon
+                        >Edit</a
+                      >
+                      <a href="#" class="select__item"
+                        ><ion-icon
+                          class="select__icon"
+                          name="folder-open-outline"
+                        ></ion-icon
+                        >View</a
+                      >
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>L-9999-16</td>
+                  <td>Laura Martinez</td>
+                  <td>laura.martinez@example.com</td>
+                  <td>852 Walnut St, San Pedro, Laguna</td>
+                  <td>05/02/1993</td>
+                  <td>31</td>
+                  <td>Female</td>
+                  <td>VIP</td>
+                  <td class="pos__rel">
+                    <button class="btn__select">
+                      <ion-icon
+                        name="ellipsis-horizontal-circle-outline"
+                        class="icon__button"
+                      ></ion-icon>
+                    </button>
+                    <div class="dropdown__select">
+                      <a href="#" class="select__item"
+                        ><ion-icon
+                          class="select__icon"
+                          name="create-outline"
+                        ></ion-icon
+                        >Edit</a
+                      >
+                      <a href="#" class="select__item"
+                        ><ion-icon
+                          class="select__icon"
+                          name="folder-open-outline"
+                        ></ion-icon
+                        >View</a
+                      >
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>L-9999-17</td>
+                  <td>James Anderson</td>
+                  <td>james.anderson@example.com</td>
+                  <td>963 Spruce St, Biñan, Laguna</td>
+                  <td>02/21/1994</td>
+                  <td>30</td>
+                  <td>Male</td>
+                  <td>Regular</td>
+                  <td class="pos__rel">
+                    <button class="btn__select">
+                      <ion-icon
+                        name="ellipsis-horizontal-circle-outline"
+                        class="icon__button"
+                      ></ion-icon>
+                    </button>
+                    <div class="dropdown__select">
+                      <a href="#" class="select__item"
+                        ><ion-icon
+                          class="select__icon"
+                          name="create-outline"
+                        ></ion-icon
+                        >Edit</a
+                      >
+                      <a href="#" class="select__item"
+                        ><ion-icon
+                          class="select__icon"
+                          name="folder-open-outline"
+                        ></ion-icon
+                        >View</a
+                      >
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>L-9999-17</td>
+                  <td>James Anderson</td>
+                  <td>james.anderson@example.com</td>
+                  <td>963 Spruce St, Biñan, Laguna</td>
+                  <td>02/21/1994</td>
+                  <td>30</td>
+                  <td>Male</td>
+                  <td>Regular</td>
+                  <td class="pos__rel">
+                    <button class="btn__select">
+                      <ion-icon
+                        name="ellipsis-horizontal-circle-outline"
+                        class="icon__button"
+                      ></ion-icon>
+                    </button>
+                    <div class="dropdown__select">
+                      <a href="#" class="select__item"
+                        ><ion-icon
+                          class="select__icon"
+                          name="create-outline"
+                        ></ion-icon
+                        >Edit</a
+                      >
+                      <a href="#" class="select__item"
+                        ><ion-icon
+                          class="select__icon"
+                          name="folder-open-outline"
+                        ></ion-icon
+                        >View</a
+                      >
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>L-9999-18</td>
+                  <td>Emma Thomas</td>
+                  <td>emma.thomas@example.com</td>
+                  <td>321 Hickory St, San Pedro, Laguna</td>
+                  <td>08/14/1996</td>
+                  <td>28</td>
+                  <td>Female</td>
+                  <td>VIP</td>
+                  <td class="pos__rel">
+                    <button class="btn__select">
+                      <ion-icon
+                        name="ellipsis-horizontal-circle-outline"
+                        class="icon__button"
+                      ></ion-icon>
+                    </button>
+                    <div class="dropdown__select">
+                      <a href="#" class="select__item"
+                        ><ion-icon
+                          class="select__icon"
+                          name="create-outline"
+                        ></ion-icon
+                        >Edit</a
+                      >
+                      <a href="#" class="select__item"
+                        ><ion-icon
+                          class="select__icon"
+                          name="folder-open-outline"
+                        ></ion-icon
+                        >View</a
+                      >
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>L-9999-18</td>
+                  <td>Emma Thomas</td>
+                  <td>emma.thomas@example.com</td>
+                  <td>321 Hickory St, San Pedro, Laguna</td>
+                  <td>08/14/1996</td>
+                  <td>28</td>
+                  <td>Female</td>
+                  <td>VIP</td>
+                  <td class="pos__rel">
+                    <button class="btn__select">
+                      <ion-icon
+                        name="ellipsis-horizontal-circle-outline"
+                        class="icon__button"
+                      ></ion-icon>
+                    </button>
+                    <div class="dropdown__select">
+                      <a href="#" class="select__item"
+                        ><ion-icon
+                          class="select__icon"
+                          name="create-outline"
+                        ></ion-icon
+                        >Edit</a
+                      >
+                      <a href="#" class="select__item"
+                        ><ion-icon
+                          class="select__icon"
+                          name="folder-open-outline"
+                        ></ion-icon
+                        >View</a
+                      >
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>L-9999-18</td>
+                  <td>Emma Thomas</td>
+                  <td>emma.thomas@example.com</td>
+                  <td>321 Hickory St, San Pedro, Laguna</td>
+                  <td>08/14/1996</td>
+                  <td>28</td>
+                  <td>Female</td>
+                  <td>VIP</td>
+                  <td class="pos__rel">
+                    <button class="btn__select">
+                      <ion-icon
+                        name="ellipsis-horizontal-circle-outline"
+                        class="icon__button"
+                      ></ion-icon>
+                    </button>
+                    <div class="dropdown__select">
+                      <a href="#" class="select__item"
+                        ><ion-icon
+                          class="select__icon"
+                          name="create-outline"
+                        ></ion-icon
+                        >Edit</a
+                      >
+                      <a href="#" class="select__item"
+                        ><ion-icon
+                          class="select__icon"
+                          name="folder-open-outline"
+                        ></ion-icon
+                        >View</a
+                      >
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>L-9999-18</td>
+                  <td>Emma Thomas</td>
+                  <td>emma.thomas@example.com</td>
+                  <td>321 Hickory St, San Pedro, Laguna</td>
+                  <td>08/14/1996</td>
+                  <td>28</td>
+                  <td>Female</td>
+                  <td>VIP</td>
+                  <td class="pos__rel">
+                    <button class="btn__select">
+                      <ion-icon
+                        name="ellipsis-horizontal-circle-outline"
+                        class="icon__button"
+                      ></ion-icon>
+                    </button>
+                    <div class="dropdown__select">
+                      <a href="#" class="select__item"
+                        ><ion-icon
+                          class="select__icon"
+                          name="create-outline"
+                        ></ion-icon
+                        >Edit</a
+                      >
+                      <a href="#" class="select__item"
+                        ><ion-icon
+                          class="select__icon"
+                          name="folder-open-outline"
+                        ></ion-icon
+                        >View</a
+                      >
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>L-9999-18</td>
+                  <td>Emma Thomas</td>
+                  <td>emma.thomas@example.com</td>
+                  <td>321 Hickory St, San Pedro, Laguna</td>
+                  <td>08/14/1996</td>
+                  <td>28</td>
+                  <td>Female</td>
+                  <td>VIP</td>
+                  <td class="pos__rel">
+                    <button class="btn__select">
+                      <ion-icon
+                        name="ellipsis-horizontal-circle-outline"
+                        class="icon__button"
+                      ></ion-icon>
+                    </button>
+                    <div class="dropdown__select">
+                      <a href="#" class="select__item"
+                        ><ion-icon
+                          class="select__icon"
+                          name="create-outline"
+                        ></ion-icon
+                        >Edit</a
+                      >
+                      <a href="#" class="select__item"
+                        ><ion-icon
+                          class="select__icon"
+                          name="folder-open-outline"
+                        ></ion-icon
+                        >View</a
+                      >
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>L-9999-18</td>
+                  <td>Emma Thomas</td>
+                  <td>emma.thomas@example.com</td>
+                  <td>321 Hickory St, San Pedro, Laguna</td>
+                  <td>08/14/1996</td>
+                  <td>28</td>
+                  <td>Female</td>
+                  <td>VIP</td>
+                  <td class="pos__rel">
+                    <button class="btn__select">
+                      <ion-icon
+                        name="ellipsis-horizontal-circle-outline"
+                        class="icon__button"
+                      ></ion-icon>
+                    </button>
+                    <div class="dropdown__select">
+                      <a href="#" class="select__item"
+                        ><ion-icon
+                          class="select__icon"
+                          name="create-outline"
+                        ></ion-icon
+                        >Edit</a
+                      >
+                      <a href="#" class="select__item"
+                        ><ion-icon
+                          class="select__icon"
+                          name="folder-open-outline"
+                        ></ion-icon
+                        >View</a
+                      >
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>L-9999-18</td>
+                  <td>Emma Thomas</td>
+                  <td>emma.thomas@example.com</td>
+                  <td>321 Hickory St, San Pedro, Laguna</td>
+                  <td>08/14/1996</td>
+                  <td>28</td>
+                  <td>Female</td>
+                  <td>VIP</td>
+                  <td class="pos__rel">
+                    <button class="btn__select">
+                      <ion-icon
+                        name="ellipsis-horizontal-circle-outline"
+                        class="icon__button"
+                      ></ion-icon>
+                    </button>
+                    <div class="dropdown__select">
+                      <a href="#" class="select__item"
+                        ><ion-icon
+                          class="select__icon"
+                          name="create-outline"
+                        ></ion-icon
+                        >Edit</a
+                      >
+                      <a href="#" class="select__item"
+                        ><ion-icon
+                          class="select__icon"
+                          name="folder-open-outline"
+                        ></ion-icon
+                        >View</a
+                      >
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>L-9999-18</td>
+                  <td>Emma Thomas</td>
+                  <td>emma.thomas@example.com</td>
+                  <td>321 Hickory St, San Pedro, Laguna</td>
+                  <td>08/14/1996</td>
+                  <td>28</td>
+                  <td>Female</td>
+                  <td>VIP</td>
+                  <td class="pos__rel">
+                    <button class="btn__select">
+                      <ion-icon
+                        name="ellipsis-horizontal-circle-outline"
+                        class="icon__button"
+                      ></ion-icon>
+                    </button>
+                    <div class="dropdown__select">
+                      <a href="#" class="select__item"
+                        ><ion-icon
+                          class="select__icon"
+                          name="create-outline"
+                        ></ion-icon
+                        >Edit</a
+                      >
+                      <a href="#" class="select__item"
+                        ><ion-icon
+                          class="select__icon"
+                          name="folder-open-outline"
+                        ></ion-icon
+                        >View</a
+                      >
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </main>
@@ -433,11 +929,37 @@
       document.addEventListener("DOMContentLoaded", function () {
         $("#dataTable").DataTable({
           dom:
-            "<'row'<'col-sm-12'f>>" + // Search box on top in the same row
+            "<'row'<'col-sm-6'f>>" + // Search box on top in the same row
             "<'row'<'col-sm-12'tr>>" + // Table
             "<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'p>>", // Bottom (length + pagination)
-
           scrollX: true,
+          oLanguage: { sSearch: "" },
+          initComplete: function () {
+            $("#dataTable_filter input").attr(
+              "placeholder",
+              "Search by name, etc."
+            );
+          },
+        });
+
+        $(document).on("click", ".btn__select", function () {
+          const dropdown = $(".dropdown__select");
+          const i = $(this).index(".btn__select");
+
+          dropdown.removeClass("open");
+          if (dropdown[i]) {
+            $(dropdown[i]).toggleClass("open");
+          }
+        });
+
+        $(document).on("click", function (event) {
+          const dropDownAction = $(".dropdown__select");
+          if (
+            !$(event.target).closest(".dropdown__select").length &&
+            !$(event.target).closest(".btn__select").length
+          ) {
+            dropDownAction.removeClass("open");
+          }
         });
 
         $("#menuButton").on("click", function (e) {

@@ -73,15 +73,16 @@ table.dataTable {
 }
 .dataTables_wrapper .dataTables_filter input {
   border: 1px solid #aaa;
-  border-radius: 0.5rem !important;
-  padding: 1rem;
+  border-radius: 1rem !important;
+  padding: 1.5rem !important;
   background-color: transparent;
   color: inherit;
-  margin-left: 3px;
+  margin-left: 0 !important;
 }
 
 .sidebar__nav {
-  height: 100vh;
+  height: 100vh; /* fallback to 100% if 100vh doesn't fit  layout */
+  height: 100%; /* fallback to 100vh if 100% doesn't fit layout */
 }
 
 th {
@@ -121,6 +122,27 @@ table.dataTable thead .sorting_desc:before {
 }
 .export__btn {
   padding: 1.5rem 2rem;
+  background-color: #ffd493;
+
+  color: var(--black-color);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 1rem;
+  top: 3rem;
+  right: 3rem;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.5s ease;
+}
+.export__btn:hover {
+  background-color: #ffbd59;
+}
+.add__btn {
+  padding: 1.5rem 2rem;
   background-color: var(--green-color-2);
 
   color: var(--black-color);
@@ -135,14 +157,126 @@ table.dataTable thead .sorting_desc:before {
   gap: 1rem;
   cursor: pointer;
   z-index: 1;
+  transition: all 0.5s ease;
 }
-
+.add__btn:hover {
+  background-color: var(--green-color);
+}
 .row {
   margin-top: 3rem;
 }
 .icon {
   width: 2rem;
   height: 2rem;
+}
+
+.dropdown__select {
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--white-color);
+  box-shadow: 0px 4px 9px 0px rgba(95, 95, 95, 0.1);
+  border-radius: 1rem;
+  position: absolute;
+  width: 100%;
+  right: 1rem;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.dropdown__select.open {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+}
+.select__item:link,
+.select__item:visited {
+  color: var(--black-color);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.4rem;
+  transition: all 0.5s ease;
+  padding: 0.5rem;
+}
+.select__item:hover,
+.select__item:active {
+  color: var(--green-color);
+}
+.select__icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.btn__select {
+  font-family: "poppins", sans-serif;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.icon__button {
+  width: 3rem;
+  height: 3rem;
+  color: var(--green-color);
+}
+/* .dataTables_scrollBody {
+  position: relative;
+  overflow-y: initial !important;
+  width: 100%;
+} */
+
+.dataTables_scroll {
+}
+.dataTables_scroll::-webkit-scrollbar {
+  width: 0.5rem; /* Width of the scrollbar */
+}
+
+.dataTables_scroll::-webkit-scrollbar-thumb {
+  background-color: var(--green-color); /* Default thumb color */
+  border-radius: 4px; /* Rounded corners */
+  padding: 1rem;
+}
+
+.dataTables_scroll::-webkit-scrollbar-thumb:hover {
+  background-color: var(--green-color);
+  padding: 1rem;
+}
+
+.dataTables_scroll::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Background of the scrollbar track */
+  padding: 1rem;
+}
+
+.dataTables_scrollBody {
+  position: relative;
+  overflow: unset !important;
+  width: 100%;
+  overflow-x: auto !important; /* Set to hide horizontal overflow */
+  overflow-y: unset !important; /* Ensure no vertical overflow */
+  /* Reset vertical overflow to default */
+}
+
+.button__box {
+  top: 5rem;
+  right: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.notification__count {
+  position: absolute;
+  top: 4rem;
+  right: 22rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: #e33b59;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white-color);
 }
 @media (max-width: 26.875em) {
   .dataTables_wrapper .dataTables_filter input {
@@ -153,5 +287,33 @@ table.dataTable thead .sorting_desc:before {
     color: inherit;
     margin-left: 3px;
     width: 14rem;
+  }
+}
+/* 640px */
+@media (max-width: 40em) {
+  .button__box {
+    top: 5.8rem;
+    right: 2rem;
+    display: flex;
+    gap: 1rem;
+  }
+}
+/* 520px */
+@media (max-width: 32.5em) {
+  .button__box {
+    top: 5.8rem;
+    right: 2rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+  }
+  .export__btn {
+    padding: 1rem 2rem;
+  }
+  .add__btn {
+    padding: 1rem 2rem;
+  }
+  .button__box {
+    top: 2rem;
   }
 }
