@@ -81,7 +81,8 @@ table.dataTable {
 }
 
 .sidebar__nav {
-  height: 100vh;
+  height: 100vh; /* fallback to 100% if 100vh doesn't fit  layout */
+  height: 100%; /* fallback to 100vh if 100% doesn't fit layout */
 }
 
 th {
@@ -135,6 +136,10 @@ table.dataTable thead .sorting_desc:before {
   gap: 1rem;
   cursor: pointer;
   z-index: 1;
+  transition: all 0.5s ease;
+}
+.export__btn:hover {
+  background-color: #ffbd59;
 }
 .add__btn {
   padding: 1.5rem 2rem;
@@ -152,6 +157,10 @@ table.dataTable thead .sorting_desc:before {
   gap: 1rem;
   cursor: pointer;
   z-index: 1;
+  transition: all 0.5s ease;
+}
+.add__btn:hover {
+  background-color: var(--green-color);
 }
 .row {
   margin-top: 3rem;
@@ -175,10 +184,11 @@ table.dataTable thead .sorting_desc:before {
   z-index: 1;
   visibility: hidden;
   opacity: 0;
+  transition: all 0.5s ease;
 }
 .dropdown__select.open {
-  opacity: 1;
   display: flex;
+  opacity: 1;
   visibility: visible;
 }
 .select__item:link,
@@ -189,6 +199,12 @@ table.dataTable thead .sorting_desc:before {
   align-items: center;
   gap: 1rem;
   font-size: 1.4rem;
+  transition: all 0.5s ease;
+  padding: 0.5rem;
+}
+.select__item:hover,
+.select__item:active {
+  color: var(--green-color);
 }
 .select__icon {
   width: 2rem;
@@ -199,6 +215,7 @@ table.dataTable thead .sorting_desc:before {
   font-family: "poppins", sans-serif;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 .icon__button {
   width: 3rem;
